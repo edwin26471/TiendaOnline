@@ -34,7 +34,7 @@
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
-				<form class="login100-form validate-form">
+				<form class="login100-form validate-form" runat="server">
 					<span class="login100-form-title p-b-26">
 						TIENDA ONLINE
 					</span>
@@ -43,7 +43,7 @@
 					</span>
 
 					<div class="wrap-input100 validate-input" data-validate = "Valid email is: a@b.c">
-						<input class="input100" type="text" name="email">
+						<asp:TextBox ID="txtusuario" runat="server" CssClass="input100" autocomplete="off"></asp:TextBox>
 						<span class="focus-input100" data-placeholder="Usuario"></span>
 					</div>
 
@@ -51,16 +51,19 @@
 						<span class="btn-show-pass">
 							<i class="zmdi zmdi-eye"></i>
 						</span>
-						<input class="input100" type="password" name="pass">
+						<%--<input class="input100" type="password" name="pass">--%>
+                        <asp:TextBox ID="txtpassword" runat="server" CssClass="input100" TextMode="Password"></asp:TextBox>
 						<span class="focus-input100" data-placeholder="Contraseña"></span>
 					</div>
 
 					<div class="container-login100-form-btn">
 						<div class="wrap-login100-form-btn">
 							<div class="login100-form-bgbtn"></div>
-							<button class="login100-form-btn">
+							<%--<button class="login100-form-btn">
 								Ingresar
-							</button>
+							</button>--%>
+                            <asp:Button ID="btningresar" runat="server" Text="Ingresar" CssClass=" buttonasp login100-form-btn" OnClick="btningresar_Click" />
+                                
 						</div>
 					</div>
 

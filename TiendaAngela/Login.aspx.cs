@@ -13,5 +13,19 @@ namespace TiendaAngela
         {
 
         }
+
+        protected void btningresar_Click(object sender, EventArgs e)
+        {
+            if (txtusuario.Text == "Administrador" & txtpassword.Text=="SamuSofi")
+            {
+                Response.Redirect("www.google.com");
+            }
+            else
+            {
+                txtusuario.Text = "";
+                txtpassword.Text = "";
+                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Usuario o contraseña incorrecto')", true);
+            }
+        }
     }
 }
