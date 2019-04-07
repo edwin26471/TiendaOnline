@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TiendaAngela
+namespace Datos
 {
     using System;
     using System.Collections.Generic;

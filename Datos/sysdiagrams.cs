@@ -7,21 +7,17 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TiendaAngela
+namespace Datos
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Pedidos
+    public partial class sysdiagrams
     {
-        public int idPedido { get; set; }
-        public int IdCliente { get; set; }
-        public int IdDetalleSubpedido { get; set; }
-        public decimal CostoEnvio { get; set; }
-        public int IdEstadoPedido { get; set; }
-    
-        public virtual Clientes Clientes { get; set; }
-        public virtual DetalleSubpedido DetalleSubpedido { get; set; }
-        public virtual EstadosEnvio EstadosEnvio { get; set; }
+        public string name { get; set; }
+        public int principal_id { get; set; }
+        public int diagram_id { get; set; }
+        public Nullable<int> version { get; set; }
+        public byte[] definition { get; set; }
     }
 }

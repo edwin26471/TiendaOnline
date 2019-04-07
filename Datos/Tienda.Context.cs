@@ -7,16 +7,16 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TiendaAngela
+namespace Datos
 {
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class TodoVentasEntities : DbContext
+    public partial class Tienda : DbContext
     {
-        public TodoVentasEntities()
-            : base("name=TodoVentasEntities")
+        public Tienda()
+            : base("name=Tienda")
         {
         }
     

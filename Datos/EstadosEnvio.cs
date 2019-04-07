@@ -7,24 +7,22 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TiendaAngela
+namespace Datos
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class DetalleSubpedido
+    public partial class EstadosEnvio
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public DetalleSubpedido()
+        public EstadosEnvio()
         {
             this.Pedidos = new HashSet<Pedidos>();
         }
     
-        public int IdDetalleSubpedido { get; set; }
-        public int IdArticulo { get; set; }
-        public int CantidadSolicitada { get; set; }
+        public int IdEstadoPedido { get; set; }
+        public string Descripcion { get; set; }
     
-        public virtual Inventario Inventario { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Pedidos> Pedidos { get; set; }
     }
