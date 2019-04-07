@@ -18,7 +18,7 @@ namespace TiendaAngela
         {
             if (txtusuario.Text == "Administrador" & txtpassword.Text=="SamuSofi")
             {
-                Response.Redirect("www.google.com");
+                Response.Redirect("PaginaClientes.aspx");
             }
             else
             {

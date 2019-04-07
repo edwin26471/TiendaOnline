@@ -17,12 +17,9 @@ namespace TiendaAngela
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            Tienda tienda = new Tienda();
-           
-            using (var context = new Tienda())
-            {
-                var clientes = context.Clientes.ToList();
-            }
+            Consultas consultas = new Consultas();
+            grdClientes.DataSource = consultas.ConsultarClientes();
+            grdClientes.DataBind();
         }
     }
 }
