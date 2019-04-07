@@ -18,5 +18,16 @@ namespace Datos
                 return clientes;
             }
         }
+
+        public List<Clientes> ConsultarCliente(int Telefono)
+        {
+            Tienda tienda = new Tienda();
+
+            using (var context = new Tienda())
+            {
+                var clientes = context.Clientes.Where(x => x.Telefono == Telefono).ToList();
+                return clientes;
+            }
+        }
     }
 }

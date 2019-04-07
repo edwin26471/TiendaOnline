@@ -17,13 +17,17 @@ namespace TiendaAngela
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            Consultas consultas = new Consultas();
-            grdClientes.DataSource = consultas.ConsultarClientes();
-            grdClientes.DataBind();
+            //Consultas consultas = new Consultas();
+            //grdClientes.DataSource = consultas.ConsultarClientes();
+            //grdClientes.DataBind();
         }
 
         protected void btnConsultar_Click(object sender, EventArgs e)
         {
+            Consultas consultas = new Consultas();
+            grdClientes.DataSource = consultas.ConsultarCliente(Convert.ToInt32(txtTelefono.Text));
+            grdClientes.DataBind();
+            txtTelefono.Text = "";
 
         }
     }
