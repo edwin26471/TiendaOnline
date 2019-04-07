@@ -21,5 +21,10 @@ namespace TiendaAngela
             grdClientes.DataSource = consultas.ConsultarClientes();
             grdClientes.DataBind();
         }
+
+        protected void btnConsultar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
