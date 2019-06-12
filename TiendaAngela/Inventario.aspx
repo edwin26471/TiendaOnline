@@ -1,4 +1,5 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="PaginaClientes.aspx.cs" Inherits="TiendaAngela.PaginaClientes" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Inventario.aspx.cs" Inherits="TiendaAngela.Inventario" %>
+
 
 <!DOCTYPE html>
 
@@ -41,34 +42,17 @@
 					<span class="login100-form-title p-b-48">
 						<i class="zmdi zmdi-home zmdi-hc-fw"></i>
 					</span>
-                    	<div class="container-login100-form-btn">
-						<div class="wrap-Clientes-form-btn"  >
-							<div class="login100-form-bgbtn"></div>
-                            <asp:Button ID="Button1"  runat="server" Text="Inventario" CssClass=" buttonasp login100-form-btn" OnClick="btninventario_Click" />
-                                
-						</div>
-                            </div>
-
-					<div class="wrap-input100 ">
-						<asp:TextBox ID="txtTelefono" runat="server" CssClass="input100" autocomplete="off"></asp:TextBox>
-						<span class="focus-input100" data-placeholder="Telefono"></span>
-					</div>
-                    	<div class="container-login100-form-btn">
-						<div class="wrap-Clientes-form-btn"  >
-							<div class="login100-form-bgbtn"></div>
-                            <asp:Button ID="btnConsultar"  runat="server" Text="Consultar" CssClass=" buttonasp login100-form-btn" OnClick="btnConsultar_Click" />
-                                
-						</div>
-					</div>
+                
 
                     <br />
 					<div class="wrap-input100" >
-						<asp:GridView ID="grdClientes" runat="server" CssClass="table table-hover table-striped" AutoGenerateColumns="false" >
+						<asp:GridView ID="grdInventario" runat="server" CssClass="table table-hover table-striped" AutoGenerateColumns="false" >
                             <Columns>
-                                <asp:BoundField DataField="NombreCliente" HeaderText="Nombre Cliente"  />  
-                                <asp:BoundField DataField="Telefono" HeaderText="Telefono"  />  
-                                <asp:BoundField DataField="Direccion" HeaderText="Direccion"  />  
-                                <asp:BoundField DataField="Correo" HeaderText="Correo"  />  
+                                <asp:BoundField DataField="NumeroPedido" HeaderText="Cantidad"  />  
+                                <asp:BoundField DataField="Descripcion" HeaderText="Descripcion"  />  
+                                <asp:BoundField DataField="ValorCompra" HeaderText="ValorCompra"  />  
+                                <asp:BoundField DataField="ValorVenta" HeaderText="ValorVenta"  />  
+                                <asp:BoundField DataField="Ganancia" HeaderText="Ganancia"  />  
                             </Columns>
 						</asp:GridView>
 					</div>

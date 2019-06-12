@@ -25,9 +25,18 @@ namespace TiendaAngela
         protected void btnConsultar_Click(object sender, EventArgs e)
         {
             Consultas consultas = new Consultas();
-            grdClientes.DataSource = consultas.ConsultarCliente(Convert.ToInt32(txtTelefono.Text));
-            grdClientes.DataBind();
-            txtTelefono.Text = "";
+            if (!string.IsNullOrEmpty(txtTelefono.Text))
+            {                
+                grdClientes.DataSource = consultas.ConsultarCliente(Convert.ToInt32(txtTelefono.Text));
+                grdClientes.DataBind();
+                txtTelefono.Text = "";
+            }
+
+        }
+
+        protected void btninventario_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("inventario.aspx");
 
         }
     }

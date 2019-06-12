@@ -29,5 +29,17 @@ namespace Datos
                 return clientes;
             }
         }
+
+        public List<Inventario> ConsultarInventario()
+        {
+            Inventario inventario = new Inventario();
+
+            using (var context = new Tienda())
+            {
+                var Inventario = context.Inventario.ToList();
+                return Inventario;
+            }
+
+        }
     }
 }
